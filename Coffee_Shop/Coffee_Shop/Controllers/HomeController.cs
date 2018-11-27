@@ -15,7 +15,7 @@ namespace Coffee_Shop.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Grind Haus Coffee.";
 
             return View();
         }
@@ -24,6 +24,10 @@ namespace Coffee_Shop.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+        public ActionResult Register()
+        {
             return View();
         }
     }
