@@ -26,14 +26,23 @@ namespace Coffee_Shop.Controllers
 
             return View();
         }
+
         public ActionResult Register()
         {
             return View();
         }
-        public ActionResult Welcome(string FirstName, string LastName)
+        public ActionResult Welcome(string FirstName, string LastName, string password1, string password2 )
         {
-            ViewBag.WelcomeUser = FirstName + " " + LastName;
-            return View();
+            if (password1 != password2)
+            {
+                ViewBag.ErrorMessage = "Passwords do not match!";
+                return RedirectToAction("Register");
+            }
+            else
+            {
+                ViewBag.WelcomeUser = FirstName + " " + LastName;
+                return View();
+            }
         }
        
     }

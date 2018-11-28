@@ -4,16 +4,23 @@
 }
 
 <h2>Register</h2>
-<form action="/Home/Welcome" method="post">
-First Name <input type="text" name="FirstName" required /><br /><br />
-Last Name <input type="text" name="LastName" required /><br />
-Email <input type="email" name="email" required /><br />
-User Name<input type="text" name="userName" required /><br />
-Address<input type="text" name="address" required /><br />
-City <input type="text" name="city" required /><br />
-State <input type="text" name="state" required /><br />
-Password <input type="password" name="password" required /><br />
 
-<br /><br />
-<input type="submit" class="btn-warning" />
+<form action="/Home/Welcome" method="post">
+    <div class="control-label col-md-2">
+        First Name <input type="text" name="FirstName" required /><br /><br />
+        Last Name <input type="text" name="LastName" required /><br /><br />
+        Email <input type="email" name="email" required /><br /><br />
+        Phone Number <input type="number" name="phoneNumber" required /><br /><br />
+        User Name <input type="text" name="userName" required /><br /><br />
+        Birthday <input type="date" name="birthday" required /><br /><br />
+        Password <input type="password" name="password1" required /><br /><br />
+        Confirm Password <input type="password" name="password2" required /><br /><br />
+        @if (ViewBag.ErrorMessage != null)
+        {<p class="text-danger"> @ViewBag.ErrorMessage</p>
+    }
+    
+        <input type="submit" class="btn-warning" />
+    </div>
 </form>
+
+
