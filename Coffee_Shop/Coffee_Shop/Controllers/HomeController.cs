@@ -30,5 +30,11 @@ namespace Coffee_Shop.Controllers
         {
             return View();
         }
+        public ActionResult Welcome(string FirstName, string LastName)
+        {
+            ViewBag.WelcomeUser = FirstName + " " + LastName;
+            return View();
+        }
+       
     }
 }
